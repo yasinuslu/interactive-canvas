@@ -18,7 +18,9 @@ We have ctx state on all function calls so we can alter canvas ctx while executi
 ```js
 var drawFrame = function (frame, realContext) {
   _.each(frame.calls, function (call) {
-    // currently this ctx has methods but we'll change that to only store non-function fields
+    // currently call.ctx has methods but we'll change that to only store non-function fields
+
+    // set ctx state to the exact state when that method called
     _.extend(realContext, call.ctx);
 
     // call given method on realContext with given arguments
