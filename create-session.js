@@ -1,4 +1,4 @@
-var createSession = function () {
+var createSession = function (Date) {
   var currentFrame = null;
   var frames = [];
   var fakeFunc = function (name) {
