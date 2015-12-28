@@ -11,3 +11,16 @@ This is the starting point of a project inspired by this talk https://www.youtub
 ## TODO
 - record 60 * 5 (5 seconds of a canvas) frames and play it in a canvas
 - add items to this todo :D
+
+## Some notes
+
+We have ctx state on all function calls so we can alter canvas ctx while executing those calls on real canvas. An example code would look like this:
+```js
+var drawFrame = function (frame, realContext) {
+  _.each(frame.calls, function (call) {
+    // currently this ctx has methods but we'll change that to only store non-function fields
+    _.extend(realContext, call.ctx);
+    realContext[call.name].apply(realContext, call.args);
+  });
+};
+```
