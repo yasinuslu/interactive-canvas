@@ -10,6 +10,7 @@ This is the starting point of a project inspired by this talk https://www.youtub
 
 ## TODO
 - record 60 * 5 (5 seconds of a canvas) frames and play it in a canvas
+- experiment, refactor, experiment, refactor...
 - add items to this todo :D
 
 ## Some notes
