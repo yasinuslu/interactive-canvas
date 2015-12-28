@@ -23,8 +23,6 @@ var createSessionRunner = function (code) {
   FakeDate.now = function () {
     return currentTS;
   };
-  currentTS = Date.now();
-
 
   function record(ms, cb) {
     var startTS = new Date().getTime();
@@ -35,6 +33,7 @@ var createSessionRunner = function (code) {
 
     var run = function () {
       if(currentTS > endTS) {
+        isRunning = false;
         cb && cb();
         return;
       }

@@ -30,3 +30,11 @@ var drawFrame = function (frame, realContext) {
   });
 };
 ```
+
+We can observe user's custom code scope with this hack:
+```js
+exports.___debug = function (code) {
+  return new Function(code)();
+};
+```
+We can add this function to any function's string and dive into that scope.

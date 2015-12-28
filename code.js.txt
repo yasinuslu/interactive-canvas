@@ -1,4 +1,8 @@
-var a = 12;
+var val
+
+exports.___debug = function (code) {
+  return new Function(code)();
+};
 
 exports.draw = function (ctx) {
   // this is the draw loop
