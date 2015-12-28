@@ -20,6 +20,8 @@ var drawFrame = function (frame, realContext) {
   _.each(frame.calls, function (call) {
     // currently this ctx has methods but we'll change that to only store non-function fields
     _.extend(realContext, call.ctx);
+
+    // call given method on realContext with given arguments
     realContext[call.name].apply(realContext, call.args);
   });
 };
