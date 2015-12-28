@@ -38,3 +38,9 @@ exports.___debug = function (code) {
 };
 ```
 We can add this function to any function's string and dive into that scope.
+
+## about hot swap
+So far i could access and manipulate any variable i want from outside that scope using eval.
+So in theory if we parse and get a list of all variables in a scope we should be able to save their values
+and hot swap code and reassign those variables. This could work with 1 level of function but i think we
+can do anything if we analyze user's code and inject debug function's in appropriate places we can manipulate inner scopes too.

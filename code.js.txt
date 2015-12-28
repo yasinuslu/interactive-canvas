@@ -1,10 +1,13 @@
-var val
+var myScopedVar = 10;
 
-exports.___debug = function (code) {
-  return new Function(code)();
+exports.__debug = function (code) {
+  // return new Function(code)();
+  // apparently new Function doesn't bound to this scope but evalled code gets bound
+  // eval is really evil 
+  return eval(code);
 };
 
 exports.draw = function (ctx) {
   // this is the draw loop
-  console.log(new Date());
+  myScopedVar++;
 };

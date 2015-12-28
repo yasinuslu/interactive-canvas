@@ -57,6 +57,7 @@ var createSessionRunner = function (code) {
   function runFrame() {
     session.addFrame(function (frame) {
       module.draw(session.ctx);
+      console.log('val:', module.__debug("myScopedVar"));
     });
   };
 
