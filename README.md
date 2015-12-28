@@ -7,9 +7,10 @@ This is the starting point of a project inspired by this talk https://www.youtub
 - currently we have a `createSession` function that creates a drawing session with a fake canvas context.
 - You write some canvas drawing code in code.js.txt and press run you'll have your frame recorded to play in a real canvas
 - Currently we record 1 frame
+- We could give user a real context and use drawImage on every frame and record that. But we want more inside info like which line of code draws what.
 
 ## TODO
-- record 60 * 5 (5 seconds of a canvas) frames and play it in a canvas
+- fake Date when running user script and record given ms of canvas
 - experiment, refactor, experiment, refactor...
 - add items to this todo :D
 
